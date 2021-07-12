@@ -5,8 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.net.InetAddress;
 import java.net.URL;
 import java.net.UnknownHostException;
-
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.Arrays;
 
 class HttpServerTest {
 
@@ -26,5 +25,9 @@ class HttpServerTest {
     @Test
     public void test_InetAddress() throws UnknownHostException {
         System.out.println(InetAddress.getByName("127.0.0.1").getHostName());
+        System.out.println(InetAddress.getLocalHost());
+        System.out.println(InetAddress.getByName("www.oracle.com").getHostName());
+        System.out.println(Arrays.toString(InetAddress.getByName("www.oracle.com").getAddress()));
+        System.out.println(InetAddress.getByName("www.oracle.com").getCanonicalHostName());
     }
 }
