@@ -12,6 +12,7 @@
         <module>ex01</module>
         <module>ex02</module>
         <module>ex03</module>
+        <module>ex04</module>
     </modules>
 
     <properties>
@@ -32,6 +33,7 @@
             <version>2.3</version>
             <scope>compile</scope>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/tomcat/catalina -->
         <dependency>
             <groupId>tomcat</groupId>
