@@ -22,3 +22,9 @@ tomcat-catalina 旧版的还有一个 sources 的 maven 依赖，虽然有点区
 http://localhost:8080/servlet/ModernServlet?userName=tarzan&password=pwd
 http://localhost:8080/servlet/PrimitiveServlet
 ```
+
+## ex05
+
+将 project setup 好了之后发现编译有问题，查看了一下，4.0 的 jar 少了很多方法，升级到 4.1 问题解决
+
+source 和 4.1 兼容性挺好

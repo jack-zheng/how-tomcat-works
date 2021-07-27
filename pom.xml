@@ -13,6 +13,7 @@
         <module>ex02</module>
         <module>ex03</module>
         <module>ex04</module>
+        <module>ex05</module>
     </modules>
 
     <properties>
@@ -34,12 +35,19 @@
             <scope>compile</scope>
         </dependency>
 
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/tomcat/catalina &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>tomcat</groupId>-->
+<!--            <artifactId>catalina</artifactId>-->
+<!--            <version>4.0.4</version>-->
+<!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/tomcat/catalina -->
         <dependency>
             <groupId>tomcat</groupId>
             <artifactId>catalina</artifactId>
-            <version>4.0.4</version>
+            <version>4.1.9</version>
         </dependency>
+
 
     </dependencies>
 
