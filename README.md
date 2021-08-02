@@ -54,3 +54,5 @@ ProxyDirContext 不再 Catalina lib 中，需要添加额外依赖
     <version>4.0.6</version>
 </dependency>
 ```
+
+如果用 4.x 版本的代码， Reloader class 没有。用 5.x 则很多例子中的代码已经被 deprecate 掉了，我干。。。
