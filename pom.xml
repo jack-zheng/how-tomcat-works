@@ -14,6 +14,8 @@
         <module>ex03</module>
         <module>ex04</module>
         <module>ex05</module>
+        <module>ex06</module>
+        <module>ex07</module>
     </modules>
 
     <properties>
@@ -42,12 +44,26 @@
 <!--            <version>4.0.4</version>-->
 <!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/tomcat/catalina -->
+        <!-- https://mvnrepository.com/artifact/tomcat/catalina -->
         <dependency>
             <groupId>tomcat</groupId>
             <artifactId>catalina</artifactId>
             <version>4.1.9</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/tomcat/tomcat-util -->
+        <dependency>
+            <groupId>tomcat</groupId>
+            <artifactId>tomcat-util</artifactId>
+            <version>4.1.31</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/tomcat/naming-resources -->
+        <dependency>
+            <groupId>tomcat</groupId>
+            <artifactId>naming-resources</artifactId>
+            <version>4.0.6</version>
+        </dependency>
 
     </dependencies>
 

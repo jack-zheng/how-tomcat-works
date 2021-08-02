@@ -1,13 +1,8 @@
 package com.jzheng.core;
 
-
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import org.apache.catalina.Context;
 import org.apache.catalina.Contained;
 import org.apache.catalina.Container;
+import org.apache.catalina.Context;
 import org.apache.catalina.HttpRequest;
 import org.apache.catalina.Request;
 import org.apache.catalina.Response;
@@ -15,23 +10,30 @@ import org.apache.catalina.Valve;
 import org.apache.catalina.ValveContext;
 import org.apache.catalina.Wrapper;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+
 public class SimpleContextValve implements Valve, Contained {
 
     protected Container container;
 
-    public void invoke(Request request, Response response, ValveContext valveContext) throws IOException, ServletException {
+    public void invoke(Request request, Response response, ValveContext valveContext)
+            throws IOException, ServletException {
         // Validate the request and response object types
-        if (!(request.getRequest() instanceof HttpServletRequest)
-                || !(response.getResponse() instanceof HttpServletResponse)) {
-            return; // NOTE - Not much else we can do generically
+        if (!(request.getRequest() instanceof HttpServletRequest) ||
+                !(response.getResponse() instanceof HttpServletResponse)) {
+            return;     // NOTE - Not much else we can do generically
         }
 
         // Disallow any direct access to resources under WEB-INF or META-INF
         HttpServletRequest hreq = (HttpServletRequest) request.getRequest();
         String contextPath = hreq.getContextPath();
         String requestURI = ((HttpRequest) request).getDecodedRequestURI();
-        String relativeURI = requestURI.substring(contextPath.length())
-                .toUpperCase();
+        String relativeURI =
+                requestURI.substring(contextPath.length()).toUpperCase();
 
         Context context = (Context) getContainer();
         // Select the Wrapper to be used for this Request
@@ -64,6 +66,7 @@ public class SimpleContextValve implements Valve, Contained {
     }
 
     private void badRequest(String requestURI, HttpServletResponse response) {
+        System.err.println("requestURI:" + requestURI + " is bad request!");
         try {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, requestURI);
         } catch (IllegalStateException e) {
@@ -74,6 +77,7 @@ public class SimpleContextValve implements Valve, Contained {
     }
 
     private void notFound(String requestURI, HttpServletResponse response) {
+        System.err.println("requestURI:" + requestURI + " not found!");
         try {
             response.sendError(HttpServletResponse.SC_NOT_FOUND, requestURI);
         } catch (IllegalStateException e) {
