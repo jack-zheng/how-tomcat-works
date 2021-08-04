@@ -1,4 +1,3 @@
-
 # Created by https://www.toptal.com/developers/gitignore/api/macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos
 
@@ -50,7 +49,7 @@ Temporary Items
 
 ### Java ###
 # Compiled class file
-*.class
+#*.class
 
 # Log file
 *.log
@@ -62,7 +61,7 @@ Temporary Items
 .mtj.tmp/
 
 # Package Files #
-*.jar
+#*.jar
 *.war
 *.nar
 *.ear
