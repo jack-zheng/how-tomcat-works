@@ -1,12 +1,14 @@
 # how tomcat works
 
-读书笔记，代码部分
+读书笔记，代码部分。实验环境 IDEA.
 
 ## ex01
 
 现在的浏览器对头信息的要求比较严格，实验中直接用 Chrome 访问页面显示不了。用命令行的 curl 测试凑合着看吧
 
 多次测试，只有 tomcat-catalina 4.x 的以来才是正确的，5.x 目录已经变了
+
+右键目标 class 直接 run 即可
 
 ## ex04
 
@@ -56,3 +58,17 @@ ProxyDirContext 不再 Catalina lib 中，需要添加额外依赖
 ```
 
 如果用 4.x 版本的代码， Reloader class 没有。用 5.x 则很多例子中的代码已经被 deprecate 掉了，我干。。。
+
+实在没办法了，最后决定将别人在 github 上 setup 的 project 迁移过来. 地址: https://github.com/Aresyi/HowTomcatWorks 他处理的方式很优雅
+
+setup 的时候还需要设置一下依赖的包，src-util 即源码，需要添加 lib 到依赖中
+
+1. 通过 File -> Project Structure
+2. 左侧选择 Modules 选项 
+3. 中间选择 src-util
+4. 右边选择 dependencies tab
+5. 点开 + 号，在弹出界面中选择 lib 文件夹即可
+6. 在其他的 module 中还要添加 src-util 的依赖，不过有自动提示
+
+PS：setup 完之后，其他 module 都挺好，但是 ex08 报缺少 commons-collections LRUMap 的依赖，明明在 lib 里面有的，好奇怪，最后在 ex08 里手动添加了一下依赖，问题解决
+

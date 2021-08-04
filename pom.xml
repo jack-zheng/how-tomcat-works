@@ -17,6 +17,7 @@
         <module>ex06</module>
         <module>ex07</module>
         <module>ex08</module>
+        <module>src-util</module>
     </modules>
 
     <properties>
@@ -25,12 +26,12 @@
     </properties>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>org.junit.jupiter</groupId>-->
-<!--            <artifactId>junit-jupiter-engine</artifactId>-->
-<!--            <version>5.4.0</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.4.0</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -46,25 +47,25 @@
 <!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/tomcat/catalina -->
         <!-- https://mvnrepository.com/artifact/tomcat/catalina -->
-        <dependency>
-            <groupId>tomcat</groupId>
-            <artifactId>catalina</artifactId>
-            <version>4.1.9</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>tomcat</groupId>-->
+<!--            <artifactId>catalina</artifactId>-->
+<!--            <version>4.1.9</version>-->
+<!--        </dependency>-->
 
-        <!-- https://mvnrepository.com/artifact/tomcat/tomcat-util -->
-        <dependency>
-            <groupId>tomcat</groupId>
-            <artifactId>tomcat-util</artifactId>
-            <version>4.1.31</version>
-        </dependency>
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/tomcat/tomcat-util &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>tomcat</groupId>-->
+<!--            <artifactId>tomcat-util</artifactId>-->
+<!--            <version>4.1.31</version>-->
+<!--        </dependency>-->
 
-        <!-- https://mvnrepository.com/artifact/tomcat/naming-resources -->
-        <dependency>
-            <groupId>tomcat</groupId>
-            <artifactId>naming-resources</artifactId>
-            <version>4.0.6</version>
-        </dependency>
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/tomcat/naming-resources &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>tomcat</groupId>-->
+<!--            <artifactId>naming-resources</artifactId>-->
+<!--            <version>4.0.6</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 

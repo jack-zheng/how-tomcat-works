@@ -22,6 +22,20 @@
 <!--            <artifactId>catalina</artifactId>-->
 <!--            <version>5.0.16</version>-->
 <!--        </dependency>-->
+        <dependency>
+            <groupId>com.jzheng</groupId>
+            <artifactId>src-util</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/commons-collections/commons-collections -->
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2</version>
+        </dependency>
+
     </dependencies>
 
 </project>

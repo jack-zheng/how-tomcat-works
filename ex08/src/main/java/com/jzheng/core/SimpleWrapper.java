@@ -10,6 +10,7 @@ import org.apache.catalina.LifecycleListener;
 import org.apache.catalina.Loader;
 import org.apache.catalina.Logger;
 import org.apache.catalina.Manager;
+import org.apache.catalina.Mapper;
 import org.apache.catalina.Pipeline;
 import org.apache.catalina.Realm;
 import org.apache.catalina.Request;
@@ -131,33 +132,12 @@ public class SimpleWrapper implements Wrapper, Pipeline, Lifecycle {
     public void setManager(Manager manager) {
     }
 
-    @Override
-    public Object getMappingObject() {
-        return null;
-    }
-
-    @Override
-    public Pipeline getPipeline() {
-        return null;
-    }
-
     public Cluster getCluster() {
         return null;
     }
 
     public void setCluster(Cluster cluster) {
     }
-
-    @Override
-    public int getBackgroundProcessorDelay() {
-        return 0;
-    }
-
-    @Override
-    public void setBackgroundProcessorDelay(int i) {
-
-    }
-
     public String getName() {
         return name;
     }
@@ -193,11 +173,6 @@ public class SimpleWrapper implements Wrapper, Pipeline, Lifecycle {
     }
 
     public void setResources(DirContext resources) {
-    }
-
-    @Override
-    public void backgroundProcess() {
-
     }
 
     public long getAvailable() {
@@ -242,6 +217,11 @@ public class SimpleWrapper implements Wrapper, Pipeline, Lifecycle {
     public void addContainerListener(ContainerListener listener) {
     }
 
+    @Override
+    public void addMapper(Mapper mapper) {
+
+    }
+
     public void addPropertyChangeListener(PropertyChangeListener listener) {
     }
 
@@ -257,15 +237,20 @@ public class SimpleWrapper implements Wrapper, Pipeline, Lifecycle {
         return null;
     }
 
+    @Override
+    public Mapper findMapper(String protocol) {
+        return null;
+    }
+
+    @Override
+    public Mapper[] findMappers() {
+        return new Mapper[0];
+    }
+
     public void addInitParameter(String name, String value) {
     }
 
     public void addInstanceListener(InstanceListener listener) {
-    }
-
-    @Override
-    public void addMapping(String s) {
-
     }
 
     public void addSecurityReference(String name, String link) {
@@ -282,22 +267,12 @@ public class SimpleWrapper implements Wrapper, Pipeline, Lifecycle {
         return null;
     }
 
-    @Override
-    public String[] findMappings() {
-        return new String[0];
-    }
-
     public String findSecurityReference(String name) {
         return null;
     }
 
     public String[] findSecurityReferences() {
         return null;
-    }
-
-    @Override
-    public void incrementErrorCount() {
-
     }
 
     public void invoke(Request request, Response response)
@@ -322,15 +297,15 @@ public class SimpleWrapper implements Wrapper, Pipeline, Lifecycle {
     public void removeContainerListener(ContainerListener listener) {
     }
 
+    @Override
+    public void removeMapper(Mapper mapper) {
+
+    }
+
     public void removeInitParameter(String name) {
     }
 
     public void removeInstanceListener(InstanceListener listener) {
-    }
-
-    @Override
-    public void removeMapping(String s) {
-
     }
 
     public void removePropertyChangeListener(PropertyChangeListener listener) {

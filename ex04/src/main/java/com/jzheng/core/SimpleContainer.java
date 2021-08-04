@@ -57,6 +57,11 @@ public class SimpleContainer implements Container {
     }
 
     @Override
+    public ContainerListener[] findContainerListeners() {
+        return new ContainerListener[0];
+    }
+
+    @Override
     public Mapper findMapper(String s) {
         return null;
     }

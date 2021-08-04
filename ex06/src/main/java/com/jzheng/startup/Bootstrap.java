@@ -16,8 +16,6 @@ import org.apache.catalina.connector.http.HttpConnector;
 
 public final class Bootstrap {
     public static void main(String[] args) {
-
-
         Wrapper wrapper1 = new SimpleWrapper();
         wrapper1.setName("Primitive");
         wrapper1.setServletClass("PrimitiveServlet");
