@@ -51,7 +51,7 @@ public class Response {
             }
         } catch (Exception e) {
             // thrown if cannot instantiate a File object
-            System.out.println(e.toString());
+            e.printStackTrace();
         } finally {
             if (fis != null) {
                 fis.close();

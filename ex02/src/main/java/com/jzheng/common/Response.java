@@ -1,11 +1,13 @@
 package com.jzheng.common;
 
-import com.jzheng.common.Constants;
-import com.jzheng.common.Request;
-
 import javax.servlet.ServletOutputStream;
 import javax.servlet.ServletResponse;
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.util.Locale;
 
 public class Response implements ServletResponse {
