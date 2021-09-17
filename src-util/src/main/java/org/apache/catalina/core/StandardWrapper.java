@@ -428,7 +428,7 @@ public final class StandardWrapper
      * Set the maximum number of instances that will be allocated when a single
      * thread model servlet is used.
      *
-     * @param maxInstnces New value of maxInstances
+     * @param maxInstances New value of maxInstances
      */
     public void setMaxInstances(int maxInstances) {
 
@@ -469,7 +469,7 @@ public final class StandardWrapper
     /**
      * Set the run-as identity for this servlet.
      *
-     * @param value New run-as identity value
+     * @param runAs New run-as identity value
      */
     public void setRunAs(String runAs) {
 
@@ -818,7 +818,7 @@ public final class StandardWrapper
             return instance;
 
         PrintStream out = System.out;
-        SystemLogHandler.startCapture();
+        // SystemLogHandler.startCapture();
         Servlet servlet = null;
         try {
             // If this "servlet" is really a JSP file, get the right class.
@@ -956,14 +956,14 @@ System.out.println("after calling setWrapper");
             }
             fireContainerEvent("load", this);
         } finally {
-            String log = SystemLogHandler.stopCapture();
-            if (log != null && log.length() > 0) {
-                if (getServletContext() != null) {
-                    getServletContext().log(log);
-                } else {
-                    out.println(log);
-                }
-            }
+            // String log = SystemLogHandler.stopCapture();
+            // if (log != null && log.length() > 0) {
+            //     if (getServletContext() != null) {
+            //         getServletContext().log(log);
+            //     } else {
+            //         out.println(log);
+            //     }
+            // }
         }
         return servlet;
 
@@ -1239,7 +1239,7 @@ System.out.println("after calling setWrapper");
      * container provided servlet class that should be loaded by the
      * server class loader.
      *
-     * @param name Name of the class to be checked
+     * @param classname Name of the class to be checked
      */
     private boolean isContainerProvidedServlet(String classname) {
 

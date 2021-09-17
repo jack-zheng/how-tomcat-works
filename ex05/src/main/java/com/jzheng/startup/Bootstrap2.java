@@ -12,6 +12,10 @@ import org.apache.catalina.connector.http.HttpConnector;
 
 public final class Bootstrap2 {
     public static void main(String[] args) {
+        /* call by using
+            http://localhost:8080/Modern,
+            or http://localhost:8080/Primitive,
+        */
         HttpConnector connector = new HttpConnector();
         Wrapper wrapper1 = new SimpleWrapper();
         wrapper1.setName("Primitive");
