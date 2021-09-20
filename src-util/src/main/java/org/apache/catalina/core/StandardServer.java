@@ -383,7 +383,7 @@ public final class StandardServer
     /**
      * Set the global naming resources.
      *
-     * @param namingResources The new global naming resources
+     * @param globalNamingResources The new global naming resources
      */
     public void setGlobalNamingResources
         (NamingResources globalNamingResources) {
@@ -700,13 +700,6 @@ public final class StandardServer
     /**
      * Write the configuration information for this entire <code>Server</code>
      * out to the server.xml configuration file.
-     *
-     * @exception InstanceNotFoundException if the managed resource object
-     *  cannot be found
-     * @exception MBeanException if the initializer of the object throws
-     *  an exception, or persistence is not supported
-     * @exception RuntimeOperationsException if an exception is reported
-     *  by the persistence mechanism
      */
     public synchronized void store() throws Exception {
 
@@ -1966,7 +1959,7 @@ public final class StandardServer
      *
      * @param writer PrintWriter to which we are storing
      * @param indent Number of spaces to indent this element
-     * @param server Object to be stored
+     * @param service Object to be stored
      *
      * @exception Exception if an exception occurs while storing
      */
